@@ -2,16 +2,16 @@ version: "3.8"
 
 services:
   app:
-    image: ghcr.io/microservices-itmo-21-22/demo-service:${APP_VERSION:-latest}
+    image: ghcr.io/bobrito1004/demo-service:${APP_VERSION:-latest}
     environment:
       SPRING_DATASOURCE_URL: jdbc:postgresql://postgres-app:5432/app
       SPRING_DATASOURCE_USERNAME: app
       SPRING_DATASOURCE_PASSWORD: app
     depends_on:
-      postgres-app:
+      postgres-bobrito1004_demo-service:
         condition: service_healthy
 
-  postgres-app:
+  postgres-bobrito1004_demo-service:
     image: postgres:14-alpine
     environment:
       POSTGRES_USER: app
