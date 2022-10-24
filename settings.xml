@@ -25,7 +25,7 @@
                 </repository>
                 <repository>
                     <id>github</id>
-                    <url>https://maven.pkg.github.com/microservices-itmo-21-22/common-lib</url>
+                    <url>https://maven.pkg.github.com/bobrito1004/demo-service</url>
                     <snapshots>
                         <enabled>true</enabled>
                     </snapshots>

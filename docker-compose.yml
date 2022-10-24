@@ -4,12 +4,14 @@ services:
   app:
     image: ghcr.io/bobrito1004/demo-service:${APP_VERSION:-latest}
     environment:
-      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres-app:5432/app
+      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres-bobrito1004_demo-service:5432/app
       SPRING_DATASOURCE_USERNAME: app
       SPRING_DATASOURCE_PASSWORD: app
     depends_on:
       postgres-bobrito1004_demo-service:
         condition: service_healthy
+    ports:
+      - "8080:8080"
 
   postgres-bobrito1004_demo-service:
     image: postgres:14-alpine
