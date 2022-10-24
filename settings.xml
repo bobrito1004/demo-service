@@ -6,8 +6,8 @@
     <servers>
         <server>
             <id>github</id>
-            <username>${env.GITHUB_USERNAME}</username>
-            <password>${env.GITHUB_TOKEN}</password>
+            <username>bobrito1004</username>
+            <password>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</password>
         </server>
     </servers>
 
@@ -25,7 +25,7 @@
                 </repository>
                 <repository>
                     <id>github</id>
-                    <url>https://maven.pkg.github.com/bobrito1004/demo-service</url>
+                    <url>https://maven.pkg.github.com/microservices-itmo-21-22/common-lib</url>
                     <snapshots>
                         <enabled>true</enabled>
                     </snapshots>
