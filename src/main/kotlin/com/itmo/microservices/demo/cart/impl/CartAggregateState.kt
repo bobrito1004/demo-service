@@ -8,14 +8,14 @@ import ru.quipy.core.annotations.StateTransitionFunc
 import ru.quipy.domain.AggregateState
 import java.util.*
 
-class CartAggregateState : AggregateState<String, CartAggregate>{
-    private lateinit var CartId: String
+class CartAggregateState : AggregateState<UUID, CartAggregate>{
+    private var cartId: UUID = UUID.randomUUID()
     private var createdAt: Long = System.currentTimeMillis()
     private var updatedAt: Long = System.currentTimeMillis()
 
     private var orders = mutableMapOf<UUID, OrderModel>()
 
-    override fun getId() = CartId
+    override fun getId() = cartId
 
     @StateTransitionFunc
     fun orderCreatedApply(event: OrderCreatedEvent){

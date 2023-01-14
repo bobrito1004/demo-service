@@ -15,7 +15,6 @@ fun CartAggregate.CreateOrderCommand(
     orderId: UUID = UUID.randomUUID()
 ): OrderCreatedEvent {
     return OrderCreatedEvent(
-        cartId = cartId,
         orderId = orderId,
         createdAt = System.currentTimeMillis()
     )
@@ -27,7 +26,6 @@ fun CartAggregate.UpdateOrderStatusCommand(
     status: OrderStatus
 ): OrderStatusUpdatedEvent {
     return OrderStatusUpdatedEvent(
-        cartId = cartId,
         orderId = orderId,
         status = status,
         createdAt = System.currentTimeMillis()

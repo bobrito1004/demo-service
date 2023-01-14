@@ -9,7 +9,7 @@ import java.util.*
 
 @DomainEvent(name = "ORDER_CREATED_EVENT")
 class OrderCreatedEvent(
-    val orderId: UUID = UUID.randomUUID(),
+    val orderId: UUID,
     createdAt: Long = System.currentTimeMillis(),
 ) : Event<CartAggregate>(
     name = "ORDER_CREATED_EVENT",
